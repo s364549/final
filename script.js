@@ -10,10 +10,11 @@ function randomN(min,max) {
 }
 
 function change() {
-  document.getElementById("capybara").src = "images/capy" + randomN(1,3) + ".png";
-  
   if (document.getElementById("counter").innerHTML > 99) {
     document.getElementById("capybara").src = "images/capy" + 4 + ".png";
+  }
+  else }
+  document.getElementById("capybara").src = "images/capy" + randomN(1,3) + ".png";
   }
 }
 
