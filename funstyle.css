@@ -57,7 +57,8 @@ h1, p {
   font-family: Futura, sans-serif;
 }
 
-#counter {
+#title h1 {
+  margin: 1rem;
   text-align: center;
 }
 
@@ -66,16 +67,25 @@ h1, p {
   line-height: 180%;
 }
 
+footer p {
+  text-align: center;
+  color: #1b1f3b;
+}
+
 /* ===============
    components
    =============== */
 
-
+footer {
+  background-color: #e9b44c;
+  width: 100vw;
+  padding: 40px;
+}
 
 /* ===============
    containers
    =============== */
-.wrapper {
+.wrapper, #footer-content {
   display: flex;
 }
 
@@ -83,14 +93,14 @@ h1, p {
   flex-direction: column;
 }
 
-#row {
-  justify-content: space-around;
+#row * {
+  max-width: 48vw;
+  max-height: 48vh;
+  margin: 1%;
 }
 
-#row * {
-  max-width: 50vw;
-  max-height: 100%;
-  margin: 1%;
+#title {
+  justify-content:flex-end;
 }
 
 #abouttext {
@@ -100,8 +110,3 @@ h1, p {
 /* ===============
    images
    =============== */
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
