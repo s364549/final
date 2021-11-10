@@ -13,7 +13,7 @@ function change() {
   if (document.getElementById("counter").innerHTML > 99) {
     document.getElementById("capybara").src = "images/capy" + 4 + ".png";
   }
-  else }
+  else {
   document.getElementById("capybara").src = "images/capy" + randomN(1,3) + ".png";
   }
 }
