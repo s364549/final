@@ -29,12 +29,27 @@ body {
    typography
    =============== */
 
+@font-face {
+font-family: Avenir;
+src: url(fonts/Avenir/AvenirLTStd-Black.otf);
+}
 
+@font-face {
+  font-family: FuturaLight;
+  src: url(fonts/Futura/futura_light_bt.ttf);
+}
 
+@font-face {
+  font-family: Bauhaus;
+  src: url(fonts/Bauhaus/BAUHS93.TTF);
+}
 
+@font-face {
+  font-family: CourierNew;
+  src: url(fonts/CourierNew/courbd.ttf);
+}
 
    
-
 /* ===============
    components
    =============== */
