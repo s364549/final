@@ -1,4 +1,5 @@
 /* Table of Contents
+0.5. Variables
 
 1. Global styles
 
@@ -8,10 +9,19 @@
 
 4. Containers
 
+5. Images
 */
 
 
-
+/* ===============
+   Variables
+   =============== */
+:root {
+  --h1-font-size: clamp(3rem, 5vw, 4rem);
+  --article-width: clamp(500px, 80vw, 1000px);
+  --h2-font-size: clamp(5rem, 10vw, 8rem);
+  --p-font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
 
 /* ===============
    Global styles
@@ -63,11 +73,14 @@ h1, h2, p {
 
 h2 {
   font-family: AvenirBlack, sans-serif;
+  font-size: var(--h2-font-size);
 }
 
 p {
   font-family: Avenir, sans-serif;
-  text-indent: 20px;
+  font-size: var(--p-font-size);
+  line-height: 180%;
+  text-indent: 50px;
 }
 
 h1 {
@@ -78,9 +91,19 @@ h1 {
   letter-spacing: 2px;
 }
 
+.titlediv > h1 {
+  color: #1B1f3b
+}
+
 #learningh1 {
   font-family: CourierNew, monospace;
+  font-size: var(--h1-font-size);
 }
+
+#topicalh1 {
+  font-family: FuturaLight, sans-serif;
+}
+
 
 /* ===============
    Components
@@ -88,8 +111,8 @@ h1 {
 
 
 .sectionBody {
-  background-color: rgb(27, 31, 59);
-  color: rgb(228, 214, 167); 
+  background-color: #1B1f3b;
+  color: #E4D6A7; 
 }
 
 a {
@@ -110,7 +133,6 @@ a {
 margin-left: 5vw;
 }
 
-
 /* under ligger alt fra Thomas sitt style.css */
 body {
   background-color: #1B1f3b;
@@ -120,87 +142,102 @@ body {
   width: 15%;
 }
 #navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #E4D6A7;
-    font-size: 1.5em;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #E4D6A7;
+  font-size: 1.5em;
+  overflow: hidden;
 }
 
 #navbar > a {
-    display: inline-block;
-    font-family: FuturaLight;
-    text-align: center;
-    margin: 0px;
-    list-style-type: none;
-    color: black;
-    padding: 30px 40px 30px 50px;
-    width: 200px;
+  display: inline-block;
+  font-family: FuturaLight;
+  text-align: center;
+  margin: 0px;
+  list-style-type: none;
+  color: black;
+  padding: 30px 40px 30px 50px;
+  width: 200px;
 }
 
 #navbar a:hover {
-    color: white;
-    background-color: #9b2915;
+  color: white;
+  background-color: #9b2915;
 }
-
 
 /* linker på hovedsiden */
 .link-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 300px 0 300px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 300px 0 300px;
     
 }
 .link {
-    margin: 50px 20px 30px 50px;
-    width: 250px;
-    height: 170px;
-    background: #E4D6A7;
-    border-radius: 30px;
-    min-height: 100px;
-    border: 2px black solid;
-    flex-grow: 1;
+  margin: 50px 20px 30px 50px;
+  width: 250px;
+  height: 170px;
+  background: #E4D6A7;
+  border-radius: 30px;
+  min-height: 100px;
+  border: 2px black solid;
+  flex-grow: 1;
 }
 
 .link > a {
-    font-size: 40px;
-    color: #9b2915;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    line-height: 2em;
-    text-align: center;
-    border-radius: 30px;
-    font-family: FuturaLight;
+  font-size: 40px;
+  color: #9b2915;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 30px;
+  font-family: FuturaLight;
 }
 .link > a:hover {
-    color: white;
-    background:#9b2915;
+  color: white;
+  background:#9b2915;
 }
 
 /*Footer*/
 #footer {
-    background-color: #E9b44c;
+  background-color: #E9b44c;
 }
 
 #footer ul > li {
-    display: inline-block;
-    margin: 30px 100px;
+  display: inline-block;
+  margin: 30px 100px;
 }
 
 /* ===============
    Containers
    =============== */
+.titlesection {
+  background-color: #E9b44c;
+}
 
-#titlediv {
+.titlediv {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E9b44c
 }
 
-#article {
+.articlesection {
+  display: flex;
+}
+
+.article {
   background-color: #1B1f3b;
+  margin: auto;
+  width: var(--article-width);
+}
+
+/* ===============
+   Images
+   =============== */
+
+img {
+  width: var(--article-width);
 }
