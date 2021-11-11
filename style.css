@@ -53,3 +53,28 @@ src: url(fonts/Avenir/AvenirLTStd-Black.otf);
 /* ===============
    components
    =============== */
+
+
+
+.sectionBody{
+  background-color: rgb(27, 31, 59);
+  color: rgb(228, 214, 167);
+  
+  
+}
+a{
+  color: green;
+}
+
+/*helt basic start for å dele opp sections*/
+.section{ 
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+/*må gjøres en rekke flere endringer her osv*/
+.sectionStart{ 
+  text-align: center;
+}
+.sources{
+margin-left: 5vw;
+}
