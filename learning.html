@@ -14,17 +14,19 @@
     <nav>
       <div class="nav" id="navbar"> 
         <!--bilde på navbar, for design-->
-        <img id="navbarimg" src="/images/navbarimg.png">
+        <!-- <img id="navbarimg" src="images/navbarimg.png"> -->
         <!--Link til hjemmeside-->
-        <a href="WelcomePage.html">Homepage</a>
-        <!--Link til essay side-->
-        <a href="#">Learning to code</a>
-        <!--Link til accessibility side-->
-        <a href="#">Accessibility</a>
-        <!--Link til topical-side-->
-        <a href="topical.html">Topical</a>
-        <!--Link til fun side-->
-        <a href="fun.html">Fun</a>
+        <ul>
+          <li> <a href="WelcomePage.html">Homepage</a></li>
+          <!--Link til essay side-->
+          <li><a href="#">Learning to code</a></li>
+          <!--Link til accessibility side-->
+          <li><a href="#">Accessibility</a></li>
+          <!--Link til topical-side-->
+          <li><a href="topical.html">Topical</a></li>
+          <!--Link til funside-->
+          <li><a href="fun.html">Fun</a></li>
+        </ul>
       </div>
     </nav>            
   </header>
@@ -35,7 +37,7 @@
     </div>
   </section>
   <section class="articlesection">
-    <div class="article">
+    <article>
       <h2>Transition</h2>
       <p>
         Student one went right from upper-secondary school to university and 
@@ -110,9 +112,15 @@
         both our learning to code and exercising our coding skills. 
       </p>
       <div id="githubfig">
-        <img src="images/newpage.png">
+        <figure>
+          <img src="images/github540.png"
+          srcset="images/github540.png 960w, 
+                  images/github1080.png 1920w"
+          alt="Repository in GitHub Desktop application with main as its only branch">
+          <figcaption>Image: A repository in the GitHub Desktop application, with no barnches other than main.</figcaption>
+        </figure>
       </div>
-    </div>
+    </article>
   </section>
   </main>
   <footer id="footer">
