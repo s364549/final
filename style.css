@@ -104,11 +104,8 @@ figcaption {
   font-family: FuturaLight, sans-serif;
 }
 
-.titlediv > h1 {
-  color: #1B1f3b
-}
-
-#learningh1 {
+.titlediv h1 {
+  color: #1B1f3b;
   font-family: CourierNew, monospace;
   font-size: var(--h1-font-size);
 }
@@ -116,7 +113,6 @@ figcaption {
 #topicalh1 {
   font-family: FuturaLight, sans-serif;
 }
-
 
 /* ===============
    Components
