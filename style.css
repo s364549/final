@@ -49,32 +49,48 @@ src: url(fonts/Avenir/AvenirLTStd-Black.otf);
   src: url(fonts/CourierNew/courbd.ttf);
 }
 
-   
+/* headline på hovedsiden*/
+h1, h2, p {
+  color: #E4D6A7
+}
+
+h1 {
+  text-align: center;
+  font-family: Bauhaus;
+  font-size: 50px;
+  margin: 30px 0 -10px 0;
+  letter-spacing: 2px;
+}
+
+#learningh1 {
+  font-family: CourierNew, monospace;
+}
+
 /* ===============
    components
    =============== */
 
 
 
-.sectionBody{
+.sectionBody {
   background-color: rgb(27, 31, 59);
-  color: rgb(228, 214, 167);
-  
-  
+  color: rgb(228, 214, 167); 
 }
-a{
+
+a {
   color: green;
 }
 
-/*helt basic start for å dele opp sections*/
-.section{ 
+/*for å dele opp sections*/
+.section { 
   margin-left: 15vw;
   margin-right: 15vw;
 }
 /*må gjøres en rekke flere endringer her osv*/
-.sectionStart{ 
+.sectionStart { 
   text-align: center;
 }
+
 .sources{
 margin-left: 5vw;
 }
@@ -111,15 +127,7 @@ body {
     color: white;
     background-color: #9b2915;
 }
-/* headline på hovedsiden*/
-h1 {
-    text-align: center;
-    font-family: Bauhaus;
-    color: #E4D6A7;
-    font-size: 50px;
-    margin: 30px 0 -10px 0;
-    letter-spacing: 2px;
-}
+
 
 /* linker på hovedsiden */
 .link-container {
