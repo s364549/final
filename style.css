@@ -1,10 +1,12 @@
 /* Table of Contents
 
-1. global styles
+1. Global styles
 
-2. typography
+2. Typography
 
-3. components
+3. Components
+
+4. Containers
 
 */
 
@@ -12,7 +14,7 @@
 
 
 /* ===============
-   global styles
+   Global styles
    =============== */
 
 /* In order to give ourselves a reset starting point:*/
@@ -26,12 +28,17 @@ body {
 }
 
 /* ===============
-   typography
+   Typography
    =============== */
 
 @font-face {
-font-family: Avenir;
-src: url(fonts/Avenir/AvenirLTStd-Black.otf);
+  font-family: Avenir;
+  src: url(fonts/Avenir/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(fonts/Avenir/AvenirLTStd-Black.otf);
 }
 
 @font-face {
@@ -54,6 +61,15 @@ h1, h2, p {
   color: #E4D6A7
 }
 
+h2 {
+  font-family: AvenirBlack, sans-serif;
+}
+
+p {
+  font-family: Avenir, sans-serif;
+  text-indent: 20px;
+}
+
 h1 {
   text-align: center;
   font-family: Bauhaus;
@@ -67,9 +83,8 @@ h1 {
 }
 
 /* ===============
-   components
+   Components
    =============== */
-
 
 
 .sectionBody {
@@ -98,7 +113,7 @@ margin-left: 5vw;
 
 /* under ligger alt fra Thomas sitt style.css */
 body {
-    background-color: #1B1f3b;
+  background-color: #1B1f3b;
 }
 /* navigasjonsbar */
 #navbarimg {
@@ -172,4 +187,20 @@ body {
 #footer ul > li {
     display: inline-block;
     margin: 30px 100px;
+}
+
+/* ===============
+   Containers
+   =============== */
+
+#titlediv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E9b44c
+}
+
+#article {
+  background-color: #1B1f3b;
 }
