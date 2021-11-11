@@ -28,7 +28,7 @@
    =============== */
 
 /* In order to give ourselves a reset starting point:*/
-body {
+body, figure {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -67,7 +67,7 @@ body {
 }
 
 /* headline på hovedsiden*/
-h1, h2, p {
+h1, h2, p, figcaption {
   color: #E4D6A7
 }
 
@@ -89,6 +89,10 @@ h1 {
   font-size: 50px;
   margin: 30px 0 -10px 0;
   letter-spacing: 2px;
+}
+
+figcaption {
+  font-family: FuturaLight, sans-serif;
 }
 
 .titlediv > h1 {
