@@ -21,6 +21,7 @@
   --article-width: clamp(500px, 80vw, 1000px);
   --h2-font-size: clamp(5rem, 10vw, 8rem);
   --p-font-size: clamp(1.2rem, 2vw, 1.6rem);
+  --nav-a-font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
 
 /* ===============
@@ -57,6 +58,11 @@ a:focus {
 @font-face {
   font-family: FuturaLight;
   src: url(fonts/Futura/futura_light_bt.ttf);
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(fonts/Futura/Futura_Book_font.ttf);
 }
 
 @font-face {
@@ -158,8 +164,9 @@ body {
 
 .nav a {
   display: inline-block;
-  font-family: FuturaLight;
-  margin: 0 20px;
+  font-family: Futura;
+  font-size: var(--nav-a-font-size);
+  margin: 0 10px;
   padding: 10px;
   list-style-type: none;
   color: #1B1f3b;
@@ -202,7 +209,7 @@ body {
 }
 
 .link a {
-  font-size: 40px;
+  font-size: var(--nav-a-font-size);
   color: #9b2915;
   display: inline-block;    
   width: 100%;
@@ -210,7 +217,7 @@ body {
   line-height: 400%;
   text-align: center;
   border-radius: 30px;
-  font-family: FuturaLight;
+  font-family: Futura;
 }
 
 .link a:hover, .link a:focus {
