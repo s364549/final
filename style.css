@@ -81,16 +81,13 @@ margin-left: 5vw;
 
 
 /* under ligger alt fra Thomas sitt style.css */
-@font-face {
-	font-family: 'BAUHS93';
-	src: url('./BAUHS93.eot');
-	src: local('BAUHS93'), url('./BAUHS93.woff') format('woff'), url('./BAUHS93.ttf') format('truetype');
-}
-
 body {
     background-color: #1B1f3b;
 }
 /* navigasjonsbar */
+#navbarimg {
+  width: 15%;
+}
 #navbar {
     display: flex;
     justify-content: center;
@@ -101,7 +98,7 @@ body {
 
 #navbar > a {
     display: inline-block;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    font-family: FuturaLight;
     text-align: center;
     margin: 0px;
     list-style-type: none;
@@ -117,7 +114,7 @@ body {
 /* headline på hovedsiden*/
 h1 {
     text-align: center;
-    font-family: BAUHS93;
+    font-family: Bauhaus;
     color: #E4D6A7;
     font-size: 50px;
     margin: 30px 0 -10px 0;
@@ -152,7 +149,7 @@ h1 {
     line-height: 2em;
     text-align: center;
     border-radius: 30px;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    font-family: FuturaLight;
 }
 .link > a:hover {
     color: white;
