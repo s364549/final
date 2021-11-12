@@ -17,9 +17,9 @@
    Variables
    =============== */
 :root {
-  --h1-font-size: clamp(3rem, 5vw, 4rem);
+  --h1-font-size: clamp(5rem, 10vw, 8rem);
   --article-width: clamp(500px, 80vw, 1000px);
-  --h2-font-size: clamp(5rem, 10vw, 8rem);
+  --h2-font-size: clamp(3rem, 5vw, 4rem);
   --p-font-size: clamp(1.2rem, 2vw, 1.6rem);
   --nav-a-font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
@@ -116,11 +116,11 @@ figcaption, .references h3, .references li {
 .titlediv h1 {
   color: #1B1f3b;
   font-family: AvenirBlack, sans-serif;
+  font-size: var(--h1-font-size);
 }
 
 #learningh1 {
   font-family: CourierNew, monospace;
-  font-size: var(--h1-font-size);
 }
 
 /* ===============
@@ -169,7 +169,6 @@ figcaption, .references h3, .references li {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 300px 0 300px;
-    
 }
 
 .link {
@@ -188,14 +187,14 @@ figcaption, .references h3, .references li {
   display: inline-block;    
   width: 100%;
   height: 100%;
-  line-height: 400%;
+  line-height: 500%;
   text-align: center;
   border-radius: 30px;
   font-family: Futura;
 }
 
 .link a:hover, .link a:focus {
-  color: white;
+  color: #E4D6A7;
   background:#9b2915;
 }
 
