@@ -43,11 +43,18 @@ body {
 }
 
 a {
-  color: green;
+  color: #50a2a7;
 }
 
 a:focus {
   outline: none;
+}
+
+code {
+  color: #1B1f3b;
+  background-color: #e9b44c;
+  padding:0 10px;
+  border-radius: 10px;
 }
 
 /* ===============
@@ -86,7 +93,7 @@ a:focus {
 
 /* headline på hovedsiden*/
 h1, h2, p, figcaption, .references {
-  color: #E4D6A7
+  color: #E4D6A7;
 }
 
 h2 {
