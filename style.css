@@ -85,7 +85,7 @@ a:focus {
 }
 
 /* headline på hovedsiden*/
-h1, h2, p, figcaption {
+h1, h2, p, figcaption, .references {
   color: #E4D6A7
 }
 
@@ -122,10 +122,6 @@ figcaption, #topicalh1, .references h3, .references li {
 /* ===============
    Components
    =============== */
-
-.references {
-  color: #E4D6A7;
-}
 
 /* navigasjonsbar */
 .nav {
