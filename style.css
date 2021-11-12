@@ -118,28 +118,13 @@ figcaption {
    Components
    =============== */
 
-
-.sectionBody {
-  background-color: #1B1f3b;
-  color: #E4D6A7; 
-}
-
 a {
   color: green;
 }
 
-/*for å dele opp sections*/
-.section { 
-  margin-left: 15vw;
-  margin-right: 15vw;
-}
-/*må gjøres en rekke flere endringer her osv*/
-.sectionStart { 
-  text-align: center;
-}
-
-.sources{
+.references{
 margin-left: 5vw;
+color: #E4D6A7;
 }
 
 /* under ligger alt fra Thomas sitt style.css */
