@@ -38,9 +38,18 @@ body, figure {
 	vertical-align: baseline;
 }
 
+body {
+  background-color: #1B1f3b;
+}
+
+a {
+  color: green;
+}
+
 a:focus {
   outline: none;
 }
+
 /* ===============
    Typography
    =============== */
@@ -100,7 +109,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-figcaption {
+figcaption, #topicalh1, .references h3, .references li {
   font-family: FuturaLight, sans-serif;
 }
 
@@ -110,31 +119,15 @@ figcaption {
   font-size: var(--h1-font-size);
 }
 
-#topicalh1 {
-  font-family: FuturaLight, sans-serif;
-}
-
 /* ===============
    Components
    =============== */
 
-a {
-  color: green;
+.references {
+  color: #E4D6A7;
 }
 
-.references{
-margin-left: 5vw;
-color: #E4D6A7;
-}
-
-/* under ligger alt fra Thomas sitt style.css */
-body {
-  background-color: #1B1f3b;
-}
 /* navigasjonsbar */
-#navbar img {
-  width: 15%;
-}
 .nav {
   display: flex;
   justify-content: center;
