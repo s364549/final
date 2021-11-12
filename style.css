@@ -115,6 +115,9 @@ figcaption, #topicalh1, .references h3, .references li {
 
 .titlediv h1 {
   color: #1B1f3b;
+}
+
+#learningh1 {
   font-family: CourierNew, monospace;
   font-size: var(--h1-font-size);
 }
@@ -208,6 +211,7 @@ figcaption, #topicalh1, .references h3, .references li {
 /* ===============
    Containers
    =============== */
+
 .titlesection {
   background-color: #E9b44c;
 }
