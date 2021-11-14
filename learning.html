@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <script src="script.js"></script>
+  <header id="header">
+    <!--navigasjonsbar-->
+    <nav>
+      <div class="nav" id="navbar"> 
+        <!--bilde på navbar, for design-->
+        <!-- <img id="navbarimg" src="images/navbarimg.png"> -->
+        <!--Link til hjemmeside-->
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <!--Link til essay side-->
+          <li><a href="learning.html">Learning to code</a></li>
+          <!--Link til accessibility side-->
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <!--Link til topical-side-->
+          <li><a href="topical.html">Bionics</a></li>
+          <!--Link til funside-->
+          <li><a href="fun.html">Fun</a></li>
+        </ul>
+      </div>
+    </nav>            
+  </header>
+<main>
+  <section class="titlesection">
+    <div class="titlediv">
+      <h1 id="learningh1">&lt;learning to code&gt;</h1>
+    </div>
+  </section>
+  <section class="articlesection">
+    <article>
+      <h2>Transitioning to OsloMet</h2>
+      <p>
+        Student one went right from upper-secondary school to university and 
+        experienced a change in the expected degree of independent work. 
+        He had previously dabbled with JavaScript, C and HTML, so this semester 
+        served as a useful refresher with regards to coding and programming. 
+        This semester has nonetheless provided a useful foundation and introduction 
+        to object-oriented programming.
+      </p>
+      <p>
+        Student two pursued a professional degree in psychology at the University of Oslo, 
+        but decided to abandon it and instead enter the workforce. For five years he 
+        worked in retail as a service technician of consumer electronics, but honestly 
+        didn’t feel like the position provided enough challenges. He also realized the 
+        limited career opportunities in the sector, and decided to pursue the field of 
+        technology. In the year leading up to the beginning of this first semester, 
+        he enrolled in CS50, Harvard’s introductory computer science course, which 
+        introduced many of the key concepts used in coding and programming. 
+        He felt well prepared, though a bit nervous, to begin his journey at OsloMet.
+      </p>
+      <p>
+        Student three went right from taking subjects on his own to OsloMet, and was 
+        therefore used to working independently. He experienced challenges with 
+        allocating his time and spending that time working efficiently, but eventually 
+        adjusted to student life. He had little previous coding experience, but found 
+        learning the subjects of this semester to be easily manageable. 
+      </p>
+      <h2>Learning coding and programming</h2>
+      <p>
+        Learning to code and program has been quite enjoyable, because we all have a 
+        deep-seated interest for technology in one way or another. We all had different 
+        levels of coding experience, and due to the digitization of everything school 
+        related, we could progress through each subject at our own pace. If we would 
+        like, the Canvas video player allows us to increase the playback speed of 
+        pre-recorded lectures, which is especially useful when you’re already 
+        familiar with the subject of the module. 
+      </p>
+      <div id="speedfig">
+        <figure>
+          <img src="images/speed540.png"
+          srcset="images/speed1080.png 1920w,
+                  images/speed540.png 960w "
+          alt="Video player with 2x playback speed">
+          <figcaption>Image: Screenshot of Canvas video player, where you can select playback speed. 
+            The subject of this pre-recorded lecture is ArrayList in Java and adding objects to it.
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        Fortunately, the foundation of HTML and CSS is not that difficult, 
+        but we’ve faced challenges when creating  responsive layouts, and the 
+        issues tend to appear unexpectedly. For instance, we had to adapt 
+        to images scaling incorrectly. Sometimes, the text in our website’s 
+        paragraph shrunk on smaller displays to a level of illegibility. 
+        The paragraphs themselves would also narrow, and the resulting lines of 
+        text would become impractically short. To reduce the necessity for 
+        several size and scale relevant CSS rules, we’ve learned to use the 
+        <code>clamp()</code> CSS function to set lower and upper limits.
+      </p>
+      <div id="clampfig">
+        <figure>
+          <img src="images/clamp540.png"
+          srcset= "images/clamp1080.png 1920w,
+                  images/clamp540.png 960w "
+          alt="Example of our use of the clamp() function in Visual Studio Code: --h1-font-size: clamp(3rem, 5vw, 4rem)">
+          <figcaption>Image: An example of our use of the clamp function in Visual Studio Code,
+            with the area around the CSS rule containing our CSS variables highlighted.
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        Learning GitHub this semester has been one of our most valuable experiences. 
+        Using GitHub to work together on collaborative projects has presented its 
+        own challenges. After developing code simultaneously we encountered 
+        conflicts. We’ve had to remind ourselves to update our repositories 
+        frequently. Alternatively, we could work on multiple branches, but 
+        to prevent having to merge each branch afterwards and to minimize 
+        divergence of our code, primarily modifying the main branch is a 
+        trade-off we’re willing to make. Especially since the participants 
+        in our group haven’t been able to meet in person as much as we’d like, 
+        the user-friendly GitHub Desktop application has proven essential in 
+        both our learning to code and exercising our coding skills. 
+      </p>
+      <div id="githubfig">
+        <figure>
+          <img src="images/github540.png"
+          srcset="images/github1080.png 1920w,
+                  images/github540.png 960w "
+          alt="Repository in GitHub Desktop application with main as its only branch">
+          <figcaption>Image: A repository in the GitHub Desktop application, with no branches other than main. 
+            A small change in the style.css file is about to be pushed to the repository named final for this very project.
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+  </main>
+  <footer id="footer">
+    <ul>
+      <li></li>
+    </ul>
+  </footer>
+</body>
+</html>

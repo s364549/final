@@ -1,22 +1,37 @@
 /* Table of Contents
+0.5. Variables
 
-1. global styles
+1. Global styles
 
-2. typography
+2. Typography
 
-3. components
+3. Components
 
+4. Containers
+
+5. Images
 */
 
-
+@media only screen and (min-width: 961px){
 
 
 /* ===============
-   global styles
+   Variables
+   =============== */
+:root {
+  --h1-font-size: clamp(5rem, 10vw, 8rem);
+  --article-width: clamp(500px, 80vw, 1000px);
+  --h2-font-size: clamp(3rem, 5vw, 4rem);
+  --p-font-size: clamp(1.2rem, 2vw, 1.6rem);
+  --nav-a-font-size: clamp(1.3rem, 2.5vw, 2rem);
+}
+
+/* ===============
+   Global styles
    =============== */
 
 /* In order to give ourselves a reset starting point:*/
-body {
+body, figure {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,18 +40,47 @@ body {
 	vertical-align: baseline;
 }
 
+body {
+  background-color: #1B1f3b;
+}
+
+a {
+  color: #50a2a7;
+}
+
+a:focus {
+  outline: none;
+}
+
+code {
+  color: #1B1f3b;
+  background-color: #e9b44c;
+  padding:0 10px;
+  border-radius: 10px;
+}
+
 /* ===============
-   typography
+   Typography
    =============== */
 
 @font-face {
-font-family: Avenir;
-src: url(fonts/Avenir/AvenirLTStd-Black.otf);
+  font-family: Avenir;
+  src: url(fonts/Avenir/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(fonts/Avenir/AvenirLTStd-Black.otf);
 }
 
 @font-face {
   font-family: FuturaLight;
   src: url(fonts/Futura/futura_light_bt.ttf);
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(fonts/Futura/Futura_Book_font.ttf);
 }
 
 @font-face {
@@ -49,7 +93,424 @@ src: url(fonts/Avenir/AvenirLTStd-Black.otf);
   src: url(fonts/CourierNew/courbd.ttf);
 }
 
-   
+/* headline på hovedsiden*/
+h1, h2, p, figcaption, .references {
+  color: #E4D6A7;
+}
+
+h2 {
+  font-family: AvenirBlack, sans-serif;
+  font-size: var(--h2-font-size);
+}
+
+p {
+  font-family: Avenir, sans-serif;
+  font-size: var(--p-font-size);
+  line-height: 180%;
+  text-indent: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Bauhaus;
+  font-size: 50px;
+  margin: 30px 0 -10px 0;
+  letter-spacing: 2px;
+}
+
+figcaption, .references h3, .references li {
+  font-family: FuturaLight, sans-serif;
+}
+
+.titlediv h1 {
+  color: #1B1f3b;
+  font-family: AvenirBlack, sans-serif;
+  font-size: var(--h1-font-size);
+}
+
+#learningh1 {
+  font-family: CourierNew, monospace;
+}
+
 /* ===============
-   components
+   Components
    =============== */
+
+/* navigasjonsbar */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #E4D6A7;
+  font-size: 1.5em;
+  overflow: hidden;
+}
+
+.nav a {
+  display: inline-block;
+  font-family: AvenirBlack;
+  font-size: var(--nav-a-font-size);
+  margin: 0 10px;
+  padding: 10px;
+  list-style-type: none;
+  color: #1B1f3b;
+  background-color: #E4D6A7;
+  border-radius: 10px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav a:hover, .nav a:focus {
+  color: #E4D6A7;
+  background-color: #9b2915;
+  border-radius: 10px;
+}
+
+/* linker på hovedsiden */
+.link-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 300px 0 300px;
+}
+
+.link {
+  margin: 50px 20px 30px 50px;
+  width: 250px;
+  height: 170px;
+  background: #E4D6A7;
+  border-radius: 30px;
+  min-height: 100px;        
+  flex-grow: 1;
+}
+
+.link a {
+  font-size: var(--nav-a-font-size);
+  color: #9b2915;
+  display: inline-block;    
+  width: 100%;
+  height: 100%;
+  line-height: 500%;
+  text-align: center;
+  border-radius: 30px;
+  font-family: Futura;
+}
+
+.link a:hover, .link a:focus {
+  color: #E4D6A7;
+  background:#9b2915;
+}
+
+/*Footer*/
+#footer {
+  background-color: #E9b44c;
+}
+
+#footer ul > li {
+  display: inline-block;
+  margin: 30px 100px;
+}
+
+/* ===============
+   Containers
+   =============== */
+
+.titlesection {
+  background-color: #E9b44c;
+}
+
+.titlediv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.articlesection {
+  display: flex;
+}
+
+article {
+  background-color: #1B1f3b;
+  margin: auto;
+  width: var(--article-width);
+}
+
+/* ===============
+   Images
+   =============== */
+
+img {
+  width: var(--article-width);
+}
+
+.nav {
+  background-image: url(images/navbarimg.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+}
+/*phone */
+
+
+@media only screen and (max-width: 960px){
+  /* ===============
+     Variables
+     =============== */
+     :root {
+      --h1-font-size: clamp(8vw, 10vw, 8vw);
+      --article-width: clamp(100vw, 80vw, 200vh);
+      --h2-font-size: clamp(6vw, 5vw, 4vw);
+      --p-font-size: clamp(4vw, 4vw, 3.2vw);
+      --nav-a-font-size: clamp(1.3vw, 2.5vw, 2vw);
+    }
+    
+    /* ===============
+       Global styles
+       =============== */
+    
+    /* In order to give ourselves a reset starting point:*/
+    body, figure {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      
+    }
+    
+    body {
+      background-color: #1B1f3b;
+    }
+    
+    a {
+      color: #50a2a7;
+    }
+    
+    a:focus {
+      outline: none;
+    }
+    
+    code {
+      color: #1B1f3b;
+      background-color: #e9b44c;
+      padding:0 10px;
+      border-radius: 10px;
+    }
+    
+    /* ===============
+       Typography
+       =============== */
+    
+    @font-face {
+      font-family: Avenir;
+      src: url(fonts/Avenir/AvenirLTStd-Book.otf);
+    }
+    
+    @font-face {
+      font-family: AvenirBlack;
+      src: url(fonts/Avenir/AvenirLTStd-Black.otf);
+    }
+    
+    @font-face {
+      font-family: FuturaLight;
+      src: url(fonts/Futura/futura_light_bt.ttf);
+    }
+    
+    @font-face {
+      font-family: Futura;
+      src: url(fonts/Futura/Futura_Book_font.ttf);
+    }
+    
+    @font-face {
+      font-family: Bauhaus;
+      src: url(fonts/Bauhaus/BAUHS93.TTF);
+    }
+    
+    @font-face {
+      font-family: CourierNew;
+      src: url(fonts/CourierNew/courbd.ttf);
+    }
+    
+    /* headline på hovedsiden*/
+    h1, h2, p, figcaption, .references {
+      color: #E4D6A7;
+    }
+    
+    h2 {
+      font-family: AvenirBlack, sans-serif;
+      font-size: var(--h2-font-size);
+      padding: 1vw;
+    }
+    
+    p {
+      font-family: Avenir, sans-serif;
+      font-size: var(--p-font-size);
+      line-height: 180%;
+      text-indent: 10vw;
+      padding: 1vw;
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: Bauhaus;
+      font-size: 10vw;
+      margin: 30px 0 -10px 0;
+      letter-spacing: 2px;
+      
+    }
+    
+    figcaption, .references h3, .references li {
+      font-family: FuturaLight, sans-serif;
+    }
+    
+    .titlediv h1 {
+      color: #1B1f3b;
+      font-family: AvenirBlack, sans-serif;
+      font-size: var(--h1-font-size);
+    }
+    
+    #learningh1 {
+      font-family: CourierNew, monospace;
+    }
+    
+    /* ===============
+       Components
+       =============== */
+    
+    /* navigasjonsbar */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #E4D6A7;
+      font-size: 3vw;
+      overflow: hidden;
+    }
+    
+    .nav a {
+      display: inline-block;
+      font-family: AvenirBlack;
+      font-size: var(--nav-a-font-size);
+      margin: 0 2vw ;
+      padding: 1vw;
+      list-style-type: none;
+      color: #1B1f3b;
+      background-color: #E4D6A7;
+      border-radius: 1vw;
+      font-size: 3vw;
+    }
+    
+    .nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 0%;
+    }
+    
+    .nav li {
+      list-style: none;
+    }
+    
+    .nav a:hover, .nav a:focus {
+      color: #E4D6A7;
+      background-color: #9b2915;
+      border-radius: 10px;
+    }
+    
+    /* linker på hovedsiden */
+    .link-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+    }
+    
+    .link {
+      margin: 5vh 5vw 5vh 5vw;
+      width: 20vw;
+      height: 17vh;
+      background: #E4D6A7;
+      border-radius: 30px;
+      min-height: 22vh;
+      min-width: 50vw;    
+      flex-grow: 1;
+    }
+    
+    .link a {
+      font-size: var(--nav-a-font-size);
+      color: #9b2915;
+      display: inline-block;    
+      width: 90vw;
+      line-height: 20vh;
+      text-align: center;
+      border-radius: 30px;
+      font-family: Futura;
+      font-size: 8vw;
+    }
+    
+    .link a:hover, .link a:focus {
+      color: #E4D6A7;
+      background:#9b2915;
+    }
+    
+    /*Footer*/
+    #footer {
+      background-color: #E9b44c;
+    }
+    
+    #footer ul > li {
+      display: inline-block;
+      margin: 10vw 10vw;
+    }
+    
+    /* ===============
+       Containers
+       =============== */
+    
+    .titlesection {
+      background-color: #E9b44c;
+    }
+    
+    .titlediv {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .articlesection {
+      display: flex;
+    }
+    
+    article {
+      background-color: #1B1f3b;
+      margin: auto;
+      width: var(--article-width);
+    }
+    
+    /* ===============
+       Images
+       =============== */
+    
+    img {
+      width: var(--article-width);
+      
+    }
+    
+    .nav {
+      background-image: url(images/navbarimg.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+    
+  
