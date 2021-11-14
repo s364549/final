@@ -16,8 +16,5 @@ function change() {
   else {
     document.getElementById("capybara").src = "images/capy" + randomN(1,3) + ".png";
   }
-  else {
-    document.getElementById("capybara").src = "images/capy" + randomN(1,3) + ".png";
-  }
 }
 
