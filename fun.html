@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fun</title>
   <link href="style.css" rel="stylesheet">
+  <link href="funstyle.css" rel="stylesheet">
 </head>
 <body>
   <script src="script.js"></script>
   <header id="header">
+    <!--Navigationbar-->
     <nav>
       <div class="nav" id="navbar"> 
         <ul>
@@ -22,27 +24,22 @@
       </div>
     </nav>            
   </header>
-  <div id="column" class="wrapper">
-    <div id="title" class="wrapper">
-      <h2 id="friendship">Friendship: </h1>
-      <h2 id="counter">0</h1>
+  <section class="listcontainer">
+    <h1>Click to pet!</h1>
+    <div class="animallist">
+      <ul>
+        <li>
+          <figure>
+            <a href="capybara.html">
+            <img src="images/capy1.png">
+            <h2>Capybara</h2>
+            </a>
+          </figure>
+        </li>
+        <li><a href="#">???</a></li>
+      </ul>
     </div>
-    <div id="row" class="wrapper">
-      <div id="abouttext">
-        <h1>Capybaras</h1>
-        <p>
-          Capybaras are the world's largest living rodents and are 
-          native to large parts of South America. As semi-aquatics they spend a 
-          large portion of their time in water. Capybaras are incredible 
-          swimmers and herbivores, and their diet consists of grasses, 
-          aquatic plants, bark and fruit.
-        </p>
-      </div>
-      <div id="animal">
-        <img id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- <footer>
     <ul>
