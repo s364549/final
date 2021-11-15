@@ -221,13 +221,14 @@ article, .listcontainer {
 }
 
 .wrapper {
-  margin: 0 5vw;
+  margin: auto;
   max-width: 50vw;
 }
 
 @media only screen and (min-width: 1700px) {
   .wrapper {
     display: flex;
+    margin: 0 5vw;
   }
 }
 
