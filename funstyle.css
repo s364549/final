@@ -131,7 +131,7 @@ footer a {
 
 .typing ul {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 /* Styles creature typing icons */
@@ -220,12 +220,14 @@ article, .listcontainer {
   border-width: 5px;
 }
 
+/* Centers container for animal page elements. */
 .wrapper {
   margin: auto;
-  max-width: 50vw;
+  max-width: 80vw;
 }
 
-@media only screen and (min-width: 1700px) {
+/* Displays image beside text when on wide monitors. */
+@media (min-width: 1700px) {
   .wrapper {
     display: flex;
     margin: 0 5vw;
@@ -253,7 +255,10 @@ article, .listcontainer {
   max-width: clamp(400px, 40vw, 500px);
 }
 
+/* Centers and sizes image. */
 .wrapper img {
-  max-width: 40vw;
+  display: block;
+  margin: auto;
+  max-width: 70vw;
 }
 
