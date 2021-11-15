@@ -10,6 +10,7 @@
 <body>
   <script src="script.js"></script>
   <header id="header">
+    <!--Navigationbar-->
     <nav>
       <div class="nav" id="navbar"> 
         <ul>
@@ -22,14 +23,10 @@
       </div>
     </nav>            
   </header>
-  <div id="column" class="wrapper">
-    <div id="title" class="wrapper">
-      <h2 id="friendship">Friendship: </h1>
-      <h2 id="counter">0</h1>
-    </div>
-    <div id="row" class="wrapper">
+  <section class="articlesection">
+    <article>
       <div id="abouttext">
-        <h1>Capybaras</h1>
+        <h2>Capybaras</h2>
         <p>
           Capybaras are the world's largest living rodents and are 
           native to large parts of South America. As semi-aquatics they spend a 
@@ -38,11 +35,12 @@
           aquatic plants, bark and fruit.
         </p>
       </div>
-      <div id="animal">
-        <img id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
+      <div class="subitem">
+        <img class="animal" id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
+        <p id="friendship">Friendship: <h1 id="counter">0</h1></p>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 
   <!-- <footer>
     <ul>

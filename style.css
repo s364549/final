@@ -47,6 +47,9 @@
     1. Global variables
    ========================= */
 
+/* All values for upper and lower bounds were meticulously selected 
+with intent for optimal responsiveness
+after deliberate experimentation. */
 :root {
   --h1-font-size: clamp(5rem, 10vw, 8rem);
   --h2-font-size: clamp(3rem, 5vw, 4rem);
@@ -75,29 +78,42 @@ body, figure {
 	vertical-align: baseline;
 }
 
+/* The site's primary background color. */
 body {
   background-color: #1B1f3b;
 }
 
+/* The default accent color of our links. */
 a {
   color: #50a2a7;
 }
 
+/* Removes the frame of elements in focus when navigating page with tab
+and replaces their style with a high contrast appearance. */
 a:focus {
   outline: none;
+  color: #E4D6A7;
+  background:#9b2915;
 }
 
+/* All html element, CSS rules, attributes and values referenced in text 
+are emphasised with a high contrast appearance. */
 code {
   color: #1B1f3b;
   background-color: #e9b44c;
   padding: 0 10px;
-  border-radius: 10px;
+}
+
+/* Rounds the corners of the selected elements' containers. */
+code, article a, footer a {
+  border-radius: 5px;
 }
 
 /* =========================
     3. Global typography
    ========================= */
 
+/* Imports necessary fonts. */
 @font-face {
   font-family: Avenir;
   src: url(fonts/Avenir/AvenirLTStd-Book.otf);
@@ -127,10 +143,15 @@ code {
   font-family: CourierNew;
   src: url(fonts/CourierNew/courbd.ttf);
 }
-  
+
+/* Gives the selected elements the appropriate color 
+to contrast with their background. */
 h1, h2, p, figcaption, .references {
   color: #E4D6A7;
 }
+
+/* Selects fonts for, sizes, 
+centers and styles titles and text. */
 
 h1 {
   text-align: center;
@@ -154,7 +175,7 @@ figcaption {
   text-indent: 20px;;
 }
 
-figcaption, .references h3, .references li {
+figcaption, .references h3, .references li, footer li {
   font-family: FuturaLight, sans-serif;
 }
 
@@ -171,8 +192,9 @@ figcaption, .references h3, .references li {
   font-family: Futura;
 }
 
-footer p {
+footer a {
   color: #1B1f3b;
+  font-size: var(--nav-a-font-size)
 }
 
 .references li {
@@ -183,6 +205,7 @@ footer p {
     4. Global components
    ========================= */
 
+/* Sets the navigation bar's layout to flexbox and centers its content. */
 .nav {
   display: flex;
   justify-content: center;
@@ -190,6 +213,7 @@ footer p {
   overflow: hidden;
 }
 
+/* Styles and sets navigation links to inline-block, which respects margin and padding. */
 .nav a {
   display: inline-block;
   font-family: AvenirBlack;
@@ -199,23 +223,25 @@ footer p {
   background-color: #E4D6A7;
 }
 
-.nav ul {
+/* Sets link groups to flex and centers content. */
+.nav ul, .link-container {
   display: flex;
   justify-content: center;
 }
 
+/* Rearranges homepage links properly when changing viewport width. */
 .link-container {
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
+/* Styles the page buttons and sets grow factor. */
 .link {
   background: #E4D6A7;
   border-radius: 30px;     
   flex-grow: 1;
 }
 
+/* Styles and sets button links to inline-block, which respects margin and padding. */
 .link a {
   color: #9b2915;
   display: inline-block;    
@@ -224,27 +250,29 @@ footer p {
   border-radius: 30px;
 }
 
-.link a:hover, .link a:focus {
-  color: #E4D6A7;
-  background:#9b2915;
-}
-
+/* Styles footer and provides appropriate space above. */
 footer {
   background-color: #E9b44c;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0 0;
 }
 
-footer ul > li {
-  display: inline-block;
+/* Removes the dots from footer links. */
+footer ul li {
+  list-style-type: none;
 }
 
 /* =========================
     5. Global containers
    ========================= */
 
+/* Sets color contrasting with the title on the upper page portion. */
 .titlesection {
   background-color: #E9b44c;
 }
 
+/* Centers the title's container. */
 .titlediv {
   height: 100vh;
   display: flex;
@@ -252,39 +280,29 @@ footer ul > li {
   justify-content: center;
 }
 
-.articlesection {
-  display: flex;
-}
-
-/* =========================
-    5.5. fun.html global containers
-   ========================= */
-  
 article {
   background-color: #1B1f3b;
   margin: auto;
 }
 
-.wrapper, #footer-content {
+/* =========================
+    5.5. fun.html global containers
+   ========================= */
+
+/* Styles the container of the animal and the click counter */
+.subitem {
   display: flex;
+  max-width: 80vw;
 }
 
-#column {
-  flex-direction: column;
+/* Limits the artwork's width. */
+.subitem img {
+  max-width: 40vw;
 }
 
-#row * {
-  max-width: 48vw;
-  max-height: 48vh;
-  margin: 1%;
-}
-
-#title {
-  justify-content:flex-end;
-}
-
-#abouttext {
-  vertical-align: middle;
+/* Gives the counter space on the sides. */
+.subitem h1 {
+  margin: 0 100px;
 }
 
 /* =========================
