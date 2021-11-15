@@ -25,3 +25,13 @@ function change() {
   }
 }
 
+function changeToo() {
+  if (document.getElementById("counter").innerHTML > 10) {
+    document.getElementById("cockatoo").src = "images/s-too" + randomN(1,3) + ".png";
+    showHide();
+  }
+  else {
+    document.getElementById("cockatoo").src = "images/too" + randomN(1,3) + ".png";
+  }
+}
+
