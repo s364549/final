@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="funstyle.css" rel="stylesheet">
+</head>
+<body>
+  <script src="script.js"></script>
+  <header id="header">
+    <!--Navigationbar-->
+    <nav>
+      <div class="nav" id="navbar"> 
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="learning.html">Learning to code</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="topical.html">Bionics</a></li>
+          <li><a href="fun.html">Fun</a></li>
+        </ul>
+      </div>
+    </nav>            
+  </header>
+  <section class="articlesection">
+    <article>
+      <div class="shown" id="capybaradesc">
+        <h1>Capybaras</h1>
+        <p>
+          Capybaras are the world's largest living rodents and are 
+          native to large parts of South America. As semi-aquatics they spend a 
+          large portion of their time in water. Capybaras are incredible 
+          swimmers and herbivores, and their diet consists of grasses, 
+          aquatic plants, bark and fruit.
+        </p>
+      </div>
+      <div class="hidden" id="jaccuzzibaradesc">
+        <h1>Jaccuzibara</h1>
+        <div class="typing">
+          <ul>
+            <li id="fire">Fire</li>
+            <li id="water">Water</li>
+          </ul>
+        </div>
+        <div class="ability">
+          <h2>Ability: Fur Coat</h2>
+          <p>Halves the damage taken from physical moves.</p>
+        </div>
+        <p>
+          This creature absorbs its natural power from hot springs,
+          and can launch both water and fire with the force of a geyser. 
+          Its thick fur provides thermal isolation, and it is even capable of 
+          swimming in lava. 
+        </p>
+      </div>
+      <div class="subitem">
+        <img class="animal" id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
+        <p id="friendship">Friendship: <h1 id="counter">0</h1></p>
+      </div>
+      <p class="hidden" id="congrats">
+        Congratulations! Your CAPYBARA evolved into JACCUZZIBARA!
+      </p>
+    </article>
+  </section>
+
+  <!-- <footer>
+    <ul>
+      <li>Original illustrations by yours truly</li>
+    </ul>
+  </footer> -->
+</body>
+</html>

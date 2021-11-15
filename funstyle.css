@@ -1,0 +1,233 @@
+.hidden {
+  display: none;
+}
+
+/* =========================
+    1. Global variables
+   ========================= */
+
+:root {
+  --primary-light: #e0d8de;
+  --primary-dark: #89023e;
+  --secondary-dark: #19647e;
+  --accent-one: #ffc857;
+  --accent-two: #119da4;
+  --a-font-size: clamp(1.3rem, 2.5vw, 2rem);
+  --bauhaus-font-size: clamp(5rem, 10vw, 8rem);
+  /* clamp() */
+}
+
+/* =========================
+    2. Global styles
+   ========================= */
+
+/* In order to give ourselves a reset starting point:*/
+body, figure, .typing ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* The site's primary background color. */
+body {
+  background-color: var(--primary-dark);
+}
+
+/* The default accent color of our links. */
+a {
+  color: var(--accent-one);
+}
+
+.animallist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animallist li {
+  text-align: center;
+  list-style: none;
+}
+
+/* Removes the frame of elements in focus when navigating page with tab
+and replaces their style with a high contrast appearance. */
+a:focus, .nav a:hover, .nav a:focus, .link a:hover, .link a:focus {
+  outline: none;
+  color: var(--primary-light);
+  background: var(--primary-dark);
+  border-radius: 10px;
+}
+
+/* Rounds the corners of the selected elements' containers. */
+code, article a, footer a {
+  border-radius: 5px;
+}
+
+/* =========================
+    2. Global typography
+   ========================= */
+
+@font-face {
+  font-family: Bauhaus;
+  src: url(fonts/Bauhaus/BAUHS93.TTF);
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(fonts/Futura/Futura_Book_font.ttf);
+}
+
+@font-face {
+  font-family: CourierNew;
+  src: url(fonts/CourierNew/courbd.ttf);
+}
+
+
+h1 {
+  font-family: Bauhaus, sans-serif;
+  font-size: var(--bauhaus-font-size);
+}
+
+h2 {
+  font-family: Futura, sans-serif;
+}
+
+/* Gives the selected elements the appropriate color 
+to contrast with their background. */
+h1, h2, p, figcaption, .references {
+  color: var(--primary-light);
+}
+
+.animallist a {
+  font-family: Futura;
+  font-size: var(--a-font-size);
+}
+
+.titlediv h1 {
+  color: var(--primary-dark);
+}
+
+footer a {
+  color: var(--primary-dark);
+}
+
+#congrats, .ability, .ability h2, .ability p {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  margin: 10px 0;
+  padding: 0 10px;
+  text-indent: 0;
+}
+
+.ability h2 {
+  font-size: var(--a-font-size);
+}
+
+#congrats {
+  font-family: CourierNew, monospace;
+  font-size: var(--a-font-size);
+  text-indent: 0;
+  padding: 30px;
+}
+
+.typing ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Styles creature typing icons */
+.typing ul > li {
+  font-family: CourierNew, monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px 30px; 
+  list-style-type: none;
+  background-color: var(--accent-two);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: var(--primary-light);
+}
+
+/* Sets typing colors */
+#fire {
+  background-color: #cb2301;
+}
+
+#water {
+  background-color: #0d66c3;
+}
+
+/* =========================
+    3. Global components
+   ========================= */
+
+/* Sets the navigation bar's color. */
+.nav {
+  background-color: var(--secondary-dark);
+}
+
+/* Styles and sets navigation links. */
+.nav a {
+  color: #1B1f3b;
+  background-color: var(--primary-light);
+}
+
+/* Styles footer. */
+footer {
+  background-color: var(--secondary-dark);
+}
+
+/* =========================
+    4. Global containers
+   ========================= */
+
+/* Sets color contrasting with the title on the upper page portion. */
+.titlesection {
+  background-color: var(--secondary-dark);
+}
+
+article, .listcontainer {
+  background-color: var(--primary-dark);
+}
+
+/* Styles the container of the animal and the click counter */
+.subitem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80vw;
+}
+
+/* Border of the containers that appear after x number animal clicks. */
+.ability, #congrats  {
+  border-style: solid;
+  border-color: #141301;
+  border-width: 5px;
+}
+
+/* =========================
+    5. Global iamges
+   ========================= */
+
+/* Adds the stripes on the navigation bar    */
+.nav {
+  background-image: url(images/navbarimg2.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Limits the artwork's width. */
+.animallist img{
+  max-width: clamp(400px, 40vw, 500px);
+}
+
+.subitem img {
+  max-width: 40vw;
+}
+
+

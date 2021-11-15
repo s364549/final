@@ -3,19 +3,17 @@
   Table of Contents (skip to section with Ctrl + F)
 ======================================================
 
-  0.5. Global variables
+  1. Global variables
 
-  1. Global styles
+  2. Global styles
 
-  2. Global typography
+  3. Global typography
 
-  3. Global components
+  4. Global components
 
-  4. Global containers
+  5. Global containers
 
-  5. Global images
-
-  5.5. fun.html global containers
+  6. Global images
 
 ======================================================
   100. Desktop only rules
@@ -90,10 +88,11 @@ a {
 
 /* Removes the frame of elements in focus when navigating page with tab
 and replaces their style with a high contrast appearance. */
-a:focus {
+a:focus, .nav a:hover, .nav a:focus, .link a:hover, .link a:focus {
   outline: none;
   color: #E4D6A7;
   background:#9b2915;
+  border-radius: 10px;
 }
 
 /* All html element, CSS rules, attributes and values referenced in text 
@@ -135,11 +134,6 @@ code, article a, footer a {
 }
 
 @font-face {
-  font-family: Bauhaus;
-  src: url(fonts/Bauhaus/BAUHS93.TTF);
-}
-
-@font-face {
   font-family: CourierNew;
   src: url(fonts/CourierNew/courbd.ttf);
 }
@@ -152,16 +146,14 @@ h1, h2, p, figcaption, .references {
 
 /* Selects fonts for, sizes, 
 centers and styles titles and text. */
+h1, h2 {
+  font-family: AvenirBlack, sans-serif;
+}
 
 h1 {
   text-align: center;
-  font-family: Bauhaus;
   margin: 30px 0 -10px 0;
   letter-spacing: 2px;
-}
-
-h2 {
-  font-family: AvenirBlack, sans-serif;
 }
 
 p {
@@ -286,29 +278,10 @@ article {
 }
 
 /* =========================
-    5.5. fun.html global containers
-   ========================= */
-
-/* Styles the container of the animal and the click counter */
-.subitem {
-  display: flex;
-  max-width: 80vw;
-}
-
-/* Limits the artwork's width. */
-.subitem img {
-  max-width: 40vw;
-}
-
-/* Gives the counter space on the sides. */
-.subitem h1 {
-  margin: 0 100px;
-}
-
-/* =========================
     6. Global images
    ========================= */
 
+/* Adds the stripes on the navigation bar    */
 .nav {
   background-image: url(images/navbarimg.png);
   background-position: left;
@@ -325,6 +298,9 @@ article {
   /* =========================
       101.Desktop typography
      ========================= */
+
+  /* Sizes and styles 
+  titles and text. */  
 
   h1 {
     font-size: 50px;
@@ -344,10 +320,6 @@ article {
     font-size: var(--h1-font-size);
   }
 
-  /* ==========================
-      102. Desktop components
-     ========================== */
-
   .nav {
     font-size: 1.5em;
   }
@@ -363,11 +335,18 @@ article {
     list-style: none;
   }
 
-  .nav a:hover, .nav a:focus {
-    color: #E4D6A7;
-    background-color: #9b2915;
-    border-radius: 10px;
+  .link a {
+    font-size: var(--nav-a-font-size); 
+    width: 100%;
+    line-height: 500%;
   }
+
+  /* ==========================
+      102. Desktop components
+     ========================== */
+
+  /* Styles buttons 
+  on front page. */
 
   .link-container {
     margin: 0 300px 0 300px;
@@ -380,12 +359,7 @@ article {
     min-height: 100px;        
   }
 
-  .link a {
-    font-size: var(--nav-a-font-size); 
-    width: 100%;
-    line-height: 500%;
-  }
-
+  /* Styles footer.  */
   footer ul > li {
     margin: 30px 100px;
   }
@@ -394,6 +368,7 @@ article {
       103. Desktop containers
      ========================== */
 
+  /* Sets article width range. */
   article {
     width: var(--article-width);
   }
@@ -402,6 +377,7 @@ article {
       104. Desktop images
      ========================== */
 
+  /* Sets image width range. */
   img {
     width: var(--article-width);
   }
@@ -419,6 +395,9 @@ article {
   /* =============================
       201. Mobile typography
      ============================= */
+
+  /* Sizes and styles 
+  titles and text. */
 
   h1 {
     font-size: 10vw;
@@ -439,10 +418,6 @@ article {
     font-size: var(--mob-h1-font-size);
   }
   
-  /* =============================
-      202. Mobile components
-     ============================= */
-  
   .nav {
     font-size: 3vw;
   }
@@ -453,7 +428,18 @@ article {
     padding: 1vw;
     border-radius: 1vw;
   }
-  
+    
+  .link a {
+    font-size: var(--mob-nav-a-font-size); 
+    width: 90vw;
+    line-height: 20vh;
+  }
+
+  /* =============================
+    202. Mobile components
+    ============================= */
+
+  /* Styles navigation bar. */
   .nav ul {
     padding: 0%;
   }
@@ -462,12 +448,7 @@ article {
     list-style: none;
   }
   
-  .nav a:hover, .nav a:focus {
-    color: #E4D6A7;
-    background-color: #9b2915;
-    border-radius: 10px;
-  }
-  
+  /* Styles button links on front page. */
   .link-container {
     margin: 0;
   }
@@ -479,13 +460,8 @@ article {
     min-height: 22vh;
     min-width: 50vw;    
   }
-  
-  .link a {
-    font-size: var(--mob-nav-a-font-size); 
-    width: 90vw;
-    line-height: 20vh;
-  }
 
+  /* Styles footer. */
   footer ul > li {
     margin: 10vw 10vw;
   }
@@ -494,6 +470,7 @@ article {
       203. Mobile containers
      ============================= */
 
+  /* Sets article width range. */
   article {
     width: var(--mob-article-width);
   }
@@ -502,6 +479,7 @@ article {
       204. Mobile images
      ============================= */
   
+  /* Sets iamge width range. */
   img {
     width: var(--mob-article-width);
   }
