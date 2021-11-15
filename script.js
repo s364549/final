@@ -12,7 +12,6 @@ function showHide() {
   shownlist[0].style.display="none";
   var hiddenlist = document.getElementsByClassName("hidden");
   hiddenlist[0].style.display="inline-block";
-  hiddenlist[1].style.display="inline-block";
 }
 
 function change() {
