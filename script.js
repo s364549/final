@@ -26,8 +26,8 @@ function change() {
 }
 
 function changeToo() {
-  if (document.getElementById("counter").innerHTML > 10) {
-    document.getElementById("cockatoo").src = "images/s-too" + randomN(1,3) + ".png";
+  if (document.getElementById("counter").innerHTML > 25) {
+    document.getElementById("cockatoo").src = "images/s-too" + 1 + ".png";
     showHide();
   }
   else {
