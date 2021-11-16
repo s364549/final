@@ -8,8 +8,8 @@
   --secondary-dark: #19647e;
   --accent-one: #ffc857;
   --accent-two: #119da4;
-  --a-font-size: clamp(1.3rem, 2.5vw, 2rem);
-  --bauhaus-font-size: clamp(5rem, 10vw, 8rem);
+  --a-font-size: clamp(1rem, 2.5vw, 2rem);
+  --bauhaus-font-size: clamp(1.5rem, 10vw, 8rem);
   /* clamp() */
 }
 
@@ -18,7 +18,7 @@
    ========================= */
 
 /* In order to give ourselves a reset starting point:*/
-body, figure, .typing ul {
+body, figure, .typing ul{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -37,30 +37,15 @@ a {
   color: var(--accent-one);
 }
 
-.animallist {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.animallist li {
-  text-align: center;
-  list-style: none;
-}
-
-/* Removes the frame of elements in focus when navigating page with tab
-and replaces their style with a high contrast appearance. */
+/* Focus color */
 a:focus, .nav a:hover, .nav a:focus, .link a:hover, .link a:focus {
-  outline: none;
   color: var(--primary-light);
   background: var(--primary-dark);
-  border-radius: 10px;
 }
 
-/* Rounds the corners of the selected elements' containers. */
-code, article a, footer a {
-  border-radius: 5px;
+#counter, p {
+  margin: 0;
+  padding: 0;
 }
 
 /* =========================
@@ -106,8 +91,8 @@ h1, h2, p, figcaption, .references {
   color: var(--primary-dark);
 }
 
-footer a {
-  color: var(--primary-dark);
+footer a, footer li {
+  color: var(--primary-light);
 }
 
 #congrats, .ability, .ability h2, .ability p {
@@ -137,12 +122,13 @@ footer a {
 /* Styles creature typing icons */
 .typing ul > li {
   font-family: CourierNew, monospace;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   text-transform: uppercase;
   padding: 10px 30px; 
   list-style-type: none;
+  color: var(--primary-light);
   background-color: var(--accent-two);
-  border-radius: 30px;
+  border-radius: 40px;
   border-style: solid;
   border-color: var(--primary-light);
 }
@@ -196,21 +182,26 @@ footer {
   background-color: var(--secondary-dark);
 }
 
-article, .listcontainer {
+.listcontainer {
   background-color: var(--primary-dark);
+}
+
+.animallist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animallist li {
+  text-align: center;
+  list-style: none;
 }
 
 .animallist ul {
   display: flex;
-}
-
-/* Styles the container of the animal and the click counter */
-.subitem {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  max-width: 80vw;
-  max-height: 80vh;
 }
 
 /* Border of the containers that appear after x number animal clicks. */
@@ -218,21 +209,26 @@ article, .listcontainer {
   border-style: solid;
   border-color: #141301;
   border-width: 5px;
+  border-radius: 10px;
 }
 
 /* Centers container for animal page elements. */
 .wrapper {
-  margin: auto;
+  width: 80vw;
   max-width: 80vw;
+  margin: auto;
 }
 
 /* Displays image beside text when on wide monitors. */
-@media (min-width: 1700px) {
+@media (min-width: 1000px) {
   .wrapper {
     display: flex;
-    margin: 0 5vw;
   }
-}
+
+  .wrapper > * {
+    flex: 1 1 0px;
+  }
+} 
 
 .hidden {
   display: none;
@@ -258,7 +254,7 @@ article, .listcontainer {
 /* Centers and sizes image. */
 .wrapper img {
   display: block;
+  width: clamp(250px, 50vw, 400px);
   margin: auto;
-  max-width: 70vw;
 }
 

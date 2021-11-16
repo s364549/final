@@ -24,7 +24,9 @@
       </div>
     </nav>            
   </header>
+<!-- Contains animal name, description lv counter and image.  -->
   <div class="wrapper">
+<!-- What you see before x amount of clicks.  -->
     <div class="shown" id="capybaradesc">
       <h1>Capybaras</h1>
       <p>
@@ -35,6 +37,7 @@
         aquatic plants, bark and fruit.
       </p>
     </div>
+<!-- What you see after x clicks.  -->
     <div class="hidden" id="jacuzzibaradesc">
       <h1>Jacuzzibara</h1>
       <div class="typing">
@@ -57,14 +60,17 @@
         Congratulations! Your CAPYBARA evolved into JACUZZIBARA!
       </p>
     </div>
-    <p id="lv">lv.<h1 id="counter">0</h1></p>
-    <img class="animal" id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
+<!-- Always visible counter.  -->
+    <div>
+      <p id="lv">lv.</p><h1 id="counter">0</h1>
+      <img class="animal" id="capybara" src="images/capy1.png" onclick='change();countUp();' alt="Capybara">
   </div>
+</div>
 
-  <!-- <footer>
+  <footer>
     <ul>
       <li>Original illustrations by yours truly</li>
     </ul>
-  </footer> -->
+  </footer>
 </body>
 </html>

@@ -24,9 +24,9 @@
       </div>
     </nav>            
   </header>
-  <!-- <section class="articlesection">
-    <article> -->
+<!-- Contains animal name, description lv counter and image.  -->
   <div class="wrapper">
+<!-- What you see before x amount of clicks.  -->
     <div class="shown" id="cockatoodesc">
       <h1>Cockatoo</h1>
       <p>
@@ -35,6 +35,7 @@
         to climb through treebranches, and mainly consume vegetable foods like seeds, nuts and fruits.
       </p>
     </div>
+<!-- What you see after x click -->
     <div class="hidden" id="megatootdesc">
       <h1>Megatoot</h1>
       <div class="typing">
@@ -56,16 +57,17 @@
         Congratulations! Your COCKATOO evolved into MEGATOOT!
       </p>
     </div>
-    <p>lv. <h1 id="counter">0</h1></p>
-    <img class="animal" id="cockatoo" src="images/too1.png" onclick='changeToo();countUp();' alt="Cockatoo">    
+<!-- Always visible counter -->
+    <div>
+      <p>lv. <h1 id="counter">0</h1></p>
+      <img class="animal" id="cockatoo" src="images/too1.png" onclick='changeToo();countUp();' alt="Cockatoo">    
+    </div>
   </div>
-    <!-- </article>
-  </section> -->
 
-  <!-- <footer>
+  <footer>
     <ul>
       <li>Original illustrations by yours truly</li>
     </ul>
-  </footer> -->
+  </footer>
 </body>
 </html>

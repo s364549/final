@@ -1,6 +1,8 @@
 
 function countUp() {
-  document.getElementById("counter").innerHTML++;
+  if (document.getElementById("counter").innerHTML < 100) {
+    document.getElementById("counter").innerHTML++;
+  }
 }
 
 function randomN(min,max) {
