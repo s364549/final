@@ -67,7 +67,7 @@ after deliberate experimentation. */
    ========================= */
 
 /* In order to give ourselves a reset starting point:*/
-body, figure, .link-container ul {
+body, figure, .link-container ul, footer ul {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -194,13 +194,12 @@ figcaption, .references h3, .references li, footer li {
 .skiptocontent a, footer a {
   display: inline-block;
   font-family: AvenirBlack;
-  font-size: var(--nav-a-font-size);
   line-height: 180%;
   color: #1B1f3b;
 }
 
 .references li, .skiptocontent li {
-  font-size: var(--p-font-size);
+  font-size: var(--figcaption-font-size);
   margin: 20px 0 0;
 }
 
