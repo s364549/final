@@ -199,8 +199,9 @@ figcaption, .references h3, .references li, footer li {
   color: #1B1f3b;
 }
 
-.references li {
+.references li, .skiptocontent li {
   font-size: var(--p-font-size);
+  margin: 20px 0 0;
 }
 
 /* =========================
