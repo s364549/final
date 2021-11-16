@@ -67,7 +67,7 @@ after deliberate experimentation. */
    ========================= */
 
 /* In order to give ourselves a reset starting point:*/
-body, figure {
+body, figure, .link-container ul {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -88,11 +88,18 @@ a {
 
 /* Removes the frame of elements in focus when navigating page with tab
 and replaces their style with a high contrast appearance. */
-a:focus, .nav a:hover, .nav a:focus, .link a:hover, .link a:focus {
+a:focus, .nav a:hover, .nav a:focus, 
+.link a:hover, .link a:focus {
   outline: none;
   color: #E4D6A7;
   background:#9b2915;
   border-radius: 10px;
+}
+
+/* Removes the dots from li. */
+footer ul li, .nav a, .nav li, 
+.link-container li, .skiptocontent li {
+  list-style: none;
 }
 
 /* All html element, CSS rules, attributes and values referenced in text 
@@ -184,9 +191,12 @@ figcaption, .references h3, .references li, footer li {
   font-family: Futura;
 }
 
-footer a {
+.skiptocontent a, footer a {
+  display: inline-block;
+  font-family: AvenirBlack;
+  font-size: var(--nav-a-font-size);
+  line-height: 180%;
   color: #1B1f3b;
-  font-size: var(--nav-a-font-size)
 }
 
 .references li {
@@ -210,19 +220,18 @@ footer a {
   display: inline-block;
   font-family: AvenirBlack;
   border-radius: 10px;
-  list-style-type: none;
   color: #1B1f3b;
   background-color: #E4D6A7;
 }
 
 /* Sets link groups to flex and centers content. */
-.nav ul, .link-container {
+.nav ul, .link-container ul {
   display: flex;
   justify-content: center;
 }
 
 /* Rearranges homepage links properly when changing viewport width. */
-.link-container {
+.link-container ul {
   flex-wrap: wrap;
 }
 
@@ -250,10 +259,6 @@ footer {
   margin: 100px 0 0;
 }
 
-/* Removes the dots from footer links. */
-footer ul li {
-  list-style-type: none;
-}
 
 /* =========================
     5. Global containers
@@ -268,6 +273,7 @@ footer ul li {
 .titlediv {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -277,6 +283,10 @@ article {
   margin: auto;
 }
 
+#projectdesc {
+  width: var(--article-width);
+  margin: auto;
+}
 /* =========================
     6. Global images
    ========================= */
@@ -288,6 +298,26 @@ article {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+#accessibilitytitle {
+  background-image: url(images/accessibility.png);
+}
+
+#bionicstitle {
+  background-image: url(images/bionics.png);
+}
+
+#codingtitle {
+  background-image: url(images/coding.png);
+}
+
+.titlesection {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
 
 /* ======================================================
     100. Desktop only rules
@@ -331,10 +361,6 @@ article {
     border-radius: 10px;
   }
 
-  .nav li {
-    list-style: none;
-  }
-
   .link a {
     font-size: var(--nav-a-font-size); 
     width: 100%;
@@ -348,12 +374,12 @@ article {
   /* Styles buttons 
   on front page. */
 
-  .link-container {
+  .link-container ul {
     margin: 0 300px 0 300px;
   }
 
   .link {
-    margin: 50px 20px 30px 50px;
+    margin: 30px;
     width: 250px;
     height: 170px;
     min-height: 100px;        
@@ -431,7 +457,7 @@ article {
     
   .link a {
     font-size: var(--mob-nav-a-font-size); 
-    width: 90vw;
+    width: 100%;
     line-height: 20vh;
   }
 
@@ -444,12 +470,8 @@ article {
     padding: 0%;
   }
   
-  .nav li {
-    list-style: none;
-  }
-  
   /* Styles button links on front page. */
-  .link-container {
+  .link-container ul {
     margin: 0;
   }
   
@@ -479,9 +501,52 @@ article {
       204. Mobile images
      ============================= */
   
-  /* Sets iamge width range. */
+  /* Sets image width range. */
   img {
     width: var(--mob-article-width);
   }
 }
   
+/* =============================
+    300. Animations
+    ============================= */
+
+.skiptocontent, #homenavbar li, #funnavbar li, 
+.animallist img, .animal {
+  animation-name: fadeIn;
+  animation-duration: 1.2s;
+}
+
+h1 {
+  animation-name: fadeInDownSlow;
+  animation-duration: 1s;
+}
+
+a:focus, .nav a:hover, .nav a:focus, 
+.link a:hover, .link a:focus {
+  transition-property: background;
+  transition-duration: 0.1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%
+  }
+  50% {
+    opacity: 0%
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeInDownSlow {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0%
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}

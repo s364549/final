@@ -112,6 +112,7 @@ footer a, footer li {
   font-size: var(--a-font-size);
   text-indent: 0;
   padding: 30px;
+  position: absolute;
 }
 
 .typing ul {
@@ -235,7 +236,7 @@ footer {
 }
 
 /* =========================
-    5. Global iamges
+    5. Global images
    ========================= */
 
 /* Adds the stripes on the navigation bar    */
@@ -258,3 +259,27 @@ footer {
   margin: auto;
 }
 
+/* =========================
+    6. Animations
+   ========================= */
+
+#congrats {
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%
+  }
+  10% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

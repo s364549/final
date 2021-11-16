@@ -26,15 +26,20 @@
   </header>
   <main>
     <!-- The big portion at the top of our page that displays the page title.  -->
-    <section class="titlesection">
+    <section id="accessibilitytitle" class="titlesection">
       <div class="titlediv">
-        <h1 id="accessibilitytitle">Accessibility</h1>
+        <h1>Accessibility</h1>
+        <ul class="skiptocontent">
+          <li><a href="#automated">Automated test</a></li>
+          <li><a href="#further">Further considerations</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
       </div>
     </section>
     <!-- The following section containing titles, images, paragraphs and references. -->
     <section class="articlesection">
       <article>
-        <h2>Automated test</h2>
+        <h2 id="automated">Automated test</h2>
         <p>
           Using Achecker (<a target="_blank" href="https://achecker.achecks.ca/checker/index.php">Inclusive Design Research Centre, 2021</a>), we tested our code for potential issues and 
           accessibility after our first draft, and adjusted accordingly. 
@@ -44,7 +49,8 @@
           <code>topical.html</code> and removed one of them. Those were the only known 
           issues we encountered, so we decided to review the suggestions 
           for potential problems. We were told to add the <code>dir</code> element to 
-          identify the text direction in our navigation bars, but the element was depreeciated in HTML 4 and is no longer supported by major browsers. 
+          identify the text direction in our navigation bars, but the element was 
+          depreciated in HTML 4 and is no longer supported by major browsers. 
           Next we added “skip to content” links as suggested. 
           We double checked that all related link groups were 
           marked as <code>ul</code> elements, and that they appeared in the same 
@@ -56,7 +62,7 @@
           image was included. We expanded the <code>alt</code> attribute to include 
           all important text conveyed in the image as suggested.
         </p>
-        <h2>Further considerations</h2>
+        <h2 id="further">Further considerations</h2>
         <p>
           Beyond consulting with the automated test, to ensure our 
           site’s accessibility right from the start of our development 
@@ -85,11 +91,12 @@
           so we made sure to avoid very bright layouts or flashing colors. We believe 
           it’s important that our site is comfortable to use for 
           everybody, including those with photosensitivity/hypersensitivity. 
+          The few animations and transitions we applied are therefore insignificant. 
         </p>
         <!-- All our referenced sources, styled accoriding to 
             APA standard, linked and alphabetised -->
         <div class="references">
-          <h2>References</h2>
+          <h2 id="references">References</h2>
             <ul>
               <li>
                 Inclusive Design Research Centre, 2021,
