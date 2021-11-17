@@ -395,7 +395,7 @@ article {
      ========================== */
 
   /* Sets article width range. */
-  article {
+  article, #projectdesc {
     width: var(--article-width);
   }
 
@@ -493,7 +493,7 @@ article {
      ============================= */
 
   /* Sets article width range. */
-  article {
+  article, #projectdesc {
     width: var(--mob-article-width);
   }
   
