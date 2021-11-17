@@ -1,3 +1,25 @@
+/* 
+======================================================
+  Table of Contents (skip to section with Ctrl + F)
+======================================================
+
+  1. Global variables
+
+  2. Global styles
+
+  3. Global typography
+
+  4. Global components
+
+  5. Global containers
+
+  6. Global images
+
+  7. Animations
+
+
+*/
+
 /* =========================
     1. Global variables
    ========================= */
@@ -49,7 +71,7 @@ a:focus, .nav a:hover, .nav a:focus, .link a:hover, .link a:focus {
 }
 
 /* =========================
-    2. Global typography
+    3. Global typography
    ========================= */
 
 @font-face {
@@ -155,7 +177,7 @@ footer a, footer li {
   padding: 0 50px 0 0;
 }
 /* =========================
-    3. Global components
+    4. Global components
    ========================= */
 
 /* Sets the navigation bar's color. */
@@ -175,7 +197,7 @@ footer {
 }
 
 /* =========================
-    4. Global containers
+    5. Global containers
    ========================= */
 
 /* Sets color contrasting with the title on the upper page portion. */
@@ -236,7 +258,7 @@ footer {
 }
 
 /* =========================
-    5. Global images
+    6. Global images
    ========================= */
 
 /* Adds the stripes on the navigation bar    */
@@ -260,12 +282,18 @@ footer {
 }
 
 /* =========================
-    6. Animations
+    7. Animations
    ========================= */
 
 #congrats {
   animation-name: appear;
   animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.hidden > h1 {
+  opacity: 0%;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
 }
 
